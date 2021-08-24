@@ -1,0 +1,8 @@
+<label>{{ dept._id }}</label>
+<input
+   type="text"
+   [(ngModel)]="dept.deptName"
+   placeholder="New Department Name"
+/>
+<input type="text" [(ngModel)]="dept.capacity" placeholder="Capacity" />
+<button #addB (click)="Save()">Save</button>

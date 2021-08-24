@@ -1,0 +1,11 @@
+<input type="text" [(ngModel)]="newDepartment.deptId" placeholder="id" />
+<input type="text" [(ngModel)]="newDepartment.deptName" placeholder="name" />
+<input
+   type="text"
+   [(ngModel)]="newDepartment.capacity"
+   placeholder="Capacity"
+/>
+<br /><br />
+<button #addB (click)="Save()">Save</button>
+<br /><br />
+<a routerLink="/departments">Back</a>

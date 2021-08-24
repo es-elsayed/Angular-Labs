@@ -1,0 +1,23 @@
+<!-- <div> -->
+<!-- <label>{{ dept.deptId }}</label> -->
+<!-- <label>{{ dept.deptName }}</label> -->
+<!-- <label>{{ dept.capacity }}</label> -->
+<!-- <br /><br /><a routerLink="/departments">Back</a> -->
+<!-- </div> -->
+<div
+   *ngIf="dept.deptId != 0"
+   class="card border-success mb-3"
+   style="text-align: center; margin: 20px auto; max-width: 18rem"
+>
+   <div class="card-header bg-transparent border-success">
+      {{ dept.deptId }}
+   </div>
+   <div class="card-body text-success">
+      <h5 class="card-title">{{ dept.deptName }}</h5>
+   </div>
+   <div class="card-footer bg-transparent border-success">
+      {{ dept.capacity }}
+   </div>
+</div>
+<div *ngIf="dept.deptId == 0" class="fs-1">!! Unvalid ID !!</div>
+<br /><br /><a routerLink="/departments">Back</a>

@@ -1,0 +1,43 @@
+<table class="table table-striped">
+   <thead>
+      <tr>
+         <th scope="col">#</th>
+         <th scope="col">ID</th>
+         <th scope="col">Name</th>
+         <th scope="col">Capacity</th>
+         <th>Action</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr *ngFor="let item of list; let i = index">
+         <td scope="row">{{ i + 1 }}</td>
+         <td>{{ item.deptId }}</td>
+         <td>{{ item.deptName }}</td>
+         <td>{{ item.capacity }}</td>
+         <td>
+            <a routerLink="/departments/show/{{ item._id }}">Details</a>
+            <!-- <button (click)="show(item._id)">details</button> -->
+            ||
+            <a
+               routerLink="/departments/edit/{{ item._id }}"
+               style="color: rgb(4, 136, 4)"
+               >Edit</a
+            >
+            ||
+            <button
+               style="
+                  color: #f00;
+                  text-decoration: underline;
+                  background-color: transparent;
+                  border: none;
+               "
+               (click)="delete(item._id)"
+            >
+               Delete
+            </button>
+         </td>
+      </tr>
+   </tbody>
+</table>
+<a class="nav-link" routerLink="/departments/add">Add Department</a>
+<!-- <button (click)="do()">Do</button> -->
